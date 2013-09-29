@@ -1,17 +1,14 @@
 # From the python package flask, import the "Flask" constructor
 from flask import Flask, redirect
 from flask import request
-#from pymongo import MongoClient
 import pymongo
 
 app = Flask(__name__)
 
-#client = MongoClient()
-
 mongodb_uri = 'mongodb://soum:1234@paulo.mongohq.com:10013/URLShortner'
 
-   # pymongo.Connection creates a connection directly from the URI, performing
-   # authentication using the provided user components if necessary.
+# pymongo.Connection creates a connection directly from the URI, performing
+# authentication using the provided user components if necessary.
 
 try:
    client = pymongo.Connection(mongodb_uri)
@@ -23,8 +20,6 @@ except Exception, e:
 db = client.URLShortner
 collection = db.urls
 
-
-#db = {}
 # Go to homepage() function here
 @app.route("/")
 def homepage():
