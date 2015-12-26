@@ -20,7 +20,7 @@ except Exception, e:
 db = client.URLShortner
 collection = db.urls
 
-# Go to homepage() function here
+# Returns the form for Home page.
 @app.route("/")
 def homepage():
     return """<form action="/form-response" method="post">
@@ -29,7 +29,7 @@ def homepage():
 				<input type="submit" value="Submit">
               </form>"""
 
-
+# The Form response page - POST req handler.
 @app.route("/form-response", methods=['POST'])
 def insert_into_db():
 	handler = request.form['handler']
@@ -46,7 +46,7 @@ def insert_into_db():
 	    collection.insert({'handler': handler, 'url': url})
 	return "The handler has been recorded"
 
-
+# The handler page that redirects to the stored URL if the entry is present in the DB.
 @app.route("/<handler>") #, methods=['GET'])
 def redirect_to_handler(handler=None):
 	print 'HANDLER: ', handler
