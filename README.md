@@ -22,12 +22,11 @@ Steps to run locally:
 NOTES:
 - The Handler, URL info is stored in MongoDB on a remote box(used MongoHQ for this)
 
-To run the app on the internet, heroku web hosting was used. 
-- Heroku login password was created
+Heroku configuration:
+https://devcenter.heroku.com/articles/getting-started-with-python
+- heroku login
 - gunicorn was installed, which is the web framework.
 - A Procfile was decalared
 - foreman start
-
 - pip freeze > requirements.txt
 - store your app in git
-https://devcenter.heroku.com/articles/getting-started-with-python
