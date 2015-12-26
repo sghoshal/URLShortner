@@ -1,8 +1,9 @@
 A simple project to learn Python for web development, Flask, Mongo, Heroku, virtualenv.
-
 Flask is a framework used for web development on the server side.
 
-Steps to run this app locally:
+App is hosted on Heroku here -> https://damp-ocean-3981.herokuapp.com/
+
+Steps to run locally:
 
 1. If you don't have virtualenv installed, you can do:
 	$ sudo pip install virtualenv
